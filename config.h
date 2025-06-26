@@ -181,8 +181,10 @@ static const Key keys[] = {
     { MODKEY,           XK_colon,       spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
     { MODKEY,           XK_Tab,         view,           {0} },
     { MODKEY,           XK_Return,      spawn,          {.v = termcmd } },
+    { MODKEY|ShiftMask, XK_Return,      spawn,          {.v = (const char*[]){ "sd", NULL } } }, /* spawn terminal in same directory as current*/
     { MODKEY,           XK_space,       zoom,           {0} },
-    { MODKEY,           XK_BackSpace,   spawn,          {.v = (const char*[]){ "sysact", NULL } } },
+    { MODKEY,           XK_BackSpace,   NULL,           {0} },
+    { MODKEY|ShiftMask, XK_BackSpace,   spawn,          {.v = (const char*[]){ "sysact", NULL } } },
 
     /* Null bindings for unused letters and their Shift versions */
     { MODKEY|Mod5Mask,  XK_c,           spawn,          SHCMD("notify-send '$ is binded!!!'") },
