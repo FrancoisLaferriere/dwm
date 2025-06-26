@@ -219,8 +219,8 @@ static const Key keys[] = {
     { 0, XF86XK_AudioRaiseVolume,       spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%+; kill -44 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioLowerVolume,       spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-; kill -44 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioMicMute,           spawn,          SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
-    { 0, XF86XK_MonBrightnessUp,        spawn,          SHCMD("sudo brightnessctl s +15") },
-    { 0, XF86XK_MonBrightnessDown,      spawn,          SHCMD("sudo brightnessctl s 15-") },
+    { 0, XF86XK_MonBrightnessUp,        spawn,          SHCMD("brightnessctl s +15") },
+    { 0, XF86XK_MonBrightnessDown,      spawn,          SHCMD("brightnessctl s 15-") },
     { 0, XF86XK_ScreenSaver,            spawn,          SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
     { 0, XF86XK_Sleep,                  spawn,          {.v = (const char*[]){ "sudo", "-A", "zzz", NULL } } },
 
